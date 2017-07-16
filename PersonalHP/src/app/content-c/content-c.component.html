@@ -1,22 +1,114 @@
 <div class="supercontainer">
 
+	<h1>
+		Hemb's Startside
+	</h1>
+
 	<h2>Nettaviser</h2>
-	<div class="newspaperIconsContainer">
+	<div class="offsiteIconsContainer">
 
-		<div class="newspaperIcon">
-			<a href="http://www.vg.no/">
-				<img src="assets/vg.png" class="newspaperIconImg" />
-			</a>
-		</div>
+		<php-offsite-icon
+			[offsiteName]="VG"
+			[offsiteUrl]="'http://www.vg.no/'"
+			[offsiteImgSRC]="'assets/vg.png'"
+		></php-offsite-icon>
 
-		<div class="newspaperIcon">
-			<a href="http://www.dagbladet.no/">
-				<img src="assets/dagbladet.png" class="newspaperIconImg" />
-			</a>
-		</div>
+		<php-offsite-icon
+			[offsiteName]="VG"
+			[offsiteUrl]="'http://www.dagbladet.no/'"
+			[offsiteImgSRC]="'assets/dagbladet.png'"
+		></php-offsite-icon>
 
-		<div class="clear"></div>
+		<php-offsite-icon
+			[offsiteName]="Aftenposten"
+			[offsiteUrl]="'http://www.aftenposten.no/'"
+			[offsiteImgSRC]="'assets/aftenposten.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="Abcnyheter"
+			[offsiteUrl]="'http://www.abcnyheter.no/'"
+			[offsiteImgSRC]="'assets/abcnyheter.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="Tronder-avisa"
+			[offsiteUrl]="'http://www.t-a.no/'"
+			[offsiteImgSRC]="'assets/ta.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="NRK"
+			[offsiteUrl]="'http://www.nrk.no/'"
+			[offsiteImgSRC]="'assets/nrk.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="Adressa"
+			[offsiteUrl]="'http://www.adressa.no/'"
+			[offsiteImgSRC]="'assets/adrressa.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="Innherred"
+			[offsiteUrl]="'http://www.innherred.no/'"
+			[offsiteImgSRC]="'assets/innherred.png'"
+		></php-offsite-icon>
+
 	</div>
+
+	<h1>Søk</h1>
+
+	<div class="searchBarsSupercontainer">
+		<php-seach-bar
+			[searchSiteName]="'Google'"
+			[searchSiteUrl]="'https://www.google.no/search?q='"
+		></php-seach-bar>
+
+		<php-seach-bar
+			[searchSiteName]="'Wikipedia Engelsk'"
+			[searchSiteUrl]="'https://en.wikipedia.org/w/index.php?search='"
+		></php-seach-bar>
+
+		<php-seach-bar
+			[searchSiteName]="'Wikipedia Norsk'"
+			[searchSiteUrl]="'https://no.wikipedia.org/w/index.php?search='"
+		></php-seach-bar>
+
+		<php-seach-bar
+			[searchSiteName]="'Ebay'"
+			[searchSiteUrl]="'https://www.ebay.com/sch/i.html?_nkw='"
+		></php-seach-bar>
+
+		<php-seach-bar
+			[searchSiteName]="'1881'"
+			[searchSiteUrl]="'https://www.1881.no/?query='"
+		></php-seach-bar>
+
+		<php-seach-bar
+			[searchSiteName]="'Youtube'"
+			[searchSiteUrl]="'https://www.youtube.com/results?search_query='"
+		></php-seach-bar>
+
+	</div>
+
+	<h2>Nyttige sider</h2>
+	<div class="offsiteIconsContainer">
+		<php-offsite-icon
+			[offsiteName]="Facebook"
+			[offsiteUrl]="'http://www.facebook.com/'"
+			[offsiteImgSRC]="'assets/facebook.png'"
+		></php-offsite-icon>
+
+		<php-offsite-icon
+			[offsiteName]="Ebay"
+			[offsiteUrl]="'http://www.ebay.com/'"
+			[offsiteImgSRC]="'assets/ebay.png'"
+		></php-offsite-icon>
+
+	</div>
+
+
 
 
 	<router-outlet></router-outlet>

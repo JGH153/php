@@ -3,11 +3,13 @@
 	background-color: white;
 
 	padding-top: 30px;
-	width: 80%;
+	padding-bottom: 30px;
+	width: 60%;
 	min-height: 50vh;
 	border-radius: 15px;
 	margin: auto;
 	margin-top: 30px;
+	// margin-bottom: 30px;
 
 	-webkit-box-shadow: 6px 10px 38px 3px rgba(0,0,0,0.75);
 	-moz-box-shadow: 6px 10px 38px 3px rgba(0,0,0,0.75);
@@ -16,23 +18,7 @@
 	text-align: center;
 }
 
-.newspaperIcon{
-	display: inline-block;
-
-	margin-left: 10px;
-	margin-top: 10px;
-}
-
-.newspaperIconImg{
-	border-radius: 5px;
-	width: 70px;
-	height: 70px;
-
-
-}
-
-.newspaperIconsContainer{
-	text-align: center;
-	width: 80%;
+.searchBarsSupercontainer{
+	width: 50%;
 	margin: auto;
 }

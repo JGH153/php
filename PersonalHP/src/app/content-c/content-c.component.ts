@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'php-content-c',
@@ -10,6 +10,7 @@ export class ContentCComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+	  
   }
 
 }
