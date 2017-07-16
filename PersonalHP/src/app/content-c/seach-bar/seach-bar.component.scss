@@ -1,6 +1,7 @@
 
 .inputTextClass{
-	width: 75%;
+	width: 45%;
+	min-width: 290px;
 	display: inline-block;
 	//text-align: center//
 }
@@ -9,4 +10,14 @@
 	text-align: center;
 	display: inline-block;
 	width: 20%;
+}
+
+.searchLable{
+	text-align: left;
+	float: left;;
+}
+
+.rightSeachContainer{
+	float: right;
+	width: 400px;
 }

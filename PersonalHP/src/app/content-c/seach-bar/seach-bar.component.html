@@ -1,11 +1,17 @@
 
-<b>{{this.searchSiteName}}</b>
+
+
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-	<input type="text"
-		placeholder="Type here"
-		[(ngModel)]="formSeartchQuery"
-		name="formInputQueryz"
-		class="form-control inputTextClass"
-	 />
-	<button type="submit" [disabled]="!form.valid" class="btn btn-primary searchSubmitButton">Søk</button>
+	<b class="searchLable">{{this.searchSiteName}}</b>
+	<div class="rightSeachContainer">
+		<input type="text"
+			placeholder="Type here"
+			[(ngModel)]="formSeartchQuery"
+			name="formInputQueryz"
+			class="form-control inputTextClass"
+		 />
+		<button type="submit" [disabled]="!form.valid" class="btn btn-primary searchSubmitButton">Søk</button>
+	</div>
+	<div class="clear"></div>
+
 </form>
