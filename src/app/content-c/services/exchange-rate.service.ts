@@ -59,7 +59,7 @@ export class ExchangeRateService {
 		tempList.forEach(current => {
 			//where currency is in wanted list, and data is daily
 			if(wantedCurrencies.includes(current.getAttribute('QUOTE_CUR')) && current.getAttribute('FREQ') == "B"){
-				filteredList.push({"name": current.getAttribute('QUOTE_CUR'), "value" : current.childNodes[0].getAttribute('OBS_VALUE')})
+				filteredList.push({"name": current.getAttribute('QUOTE_CUR'), "value" : current.childNodes[0].getAttribute('OBS_VALUE'), "multiply" : current.getAttribute('UNIT_MULT')})
 			}
 
 		});

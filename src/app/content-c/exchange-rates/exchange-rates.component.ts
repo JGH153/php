@@ -27,4 +27,14 @@ export class ExchangeRatesComponent implements OnInit {
 
 	}
 
+	getNokVal(pow){
+		
+		if(pow <= 0){
+			return 1;
+		}else{
+			return Math.pow(10, pow);
+		}
+
+	}
+
 }
