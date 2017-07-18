@@ -12,9 +12,9 @@
 		</thead>
 		<tbody>
 			<tr *ngFor="let current of exData; let i=index">
+				<td><img src="assets/flags/{{current.name}}.png" class="exFlag"/></td>
 				<td>{{current.name}}</td>
-				<td>{{current.name}}</td>
-				<td>{{current.value}}</td>
+				<td>{{current.value}} NOK</td>
 			</tr>
 		</tbody>
 	</table>
