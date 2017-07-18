@@ -2,7 +2,10 @@
 
 
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-	<b class="searchLable">{{this.searchSiteName}}</b>
+	<div class="leftSeachContainer">
+		<b class="searchLable">{{this.searchSiteName}}</b>
+	</div>
+
 	<div class="rightSeachContainer">
 		<input type="text"
 			placeholder="Type here"

@@ -1,0 +1,23 @@
+<h2>Valutakurser</h2>
+
+<div class="exContainer">
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Flag</th>
+				<th>Navn</th>
+				<th>Siste Kurs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let current of exData; let i=index">
+				<td>{{current.name}}</td>
+				<td>{{current.name}}</td>
+				<td>{{current.value}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</div>
