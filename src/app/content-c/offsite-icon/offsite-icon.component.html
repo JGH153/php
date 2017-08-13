@@ -1,5 +1,5 @@
 <div class="offsiteIcon">
-	<a href={{offsiteUrl}} target="_blank">
+	<a [href]="sanitize(offsiteUrl)" target="{{getTargetVal()}}"> 
 		<img src={{offsiteImgSRC}} class="offsiteIconImg" />
 	</a>
 </div>
