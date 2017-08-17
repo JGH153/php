@@ -4,6 +4,7 @@ import { Http } from '@angular/http';
 
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/toPromise';
 
 
 @Injectable()
@@ -11,37 +12,17 @@ export class ExchangeRateService {
 
 	private exDataLoaded = new EventEmitter<boolean>();
 	private exData;
+	private url:string = "https://data.norges-bank.no/api/data/EXR?lastNObservations=1";
 
 	constructor(
 		private _http: Http,
 	) { }
 
-	loadExData():EventEmitter<boolean>{
 
-		setTimeout(() => {
-            //console.log("EMIT!")
-            this.handleLoadingExData();
-        }, 0);
-
-
-        return this.exDataLoaded;
-
-	}
-
-	handleLoadingExData(){
-
-		this._http.get("https://data.norges-bank.no/api/data/EXR?lastNObservations=1")
-			.subscribe(
-	            data => {
-	                this.processLodedExData(data);
-	            },
-	            error => {
-
-					console.error("get ex data error ERROR! ", error);
-
-				}
-	        );
-
+	async loadExDataAsync(): Promise<boolean> {
+		const responce = await this._http.get(this.url).toPromise();
+		this.processLodedExData(responce);
+		return true;
 	}
 
 	processLodedExData(data){

@@ -15,20 +15,18 @@ export class ExchangeRatesComponent implements OnInit {
 
 	ngOnInit() {
 
-		this._exService.loadExData().subscribe(data => {
-			//console.log("data loaded;");
-			this.exData = this._exService.getLoadedExData();
-			//console.log(this.exData);
-		}, error => {
-			//console.log("data load error;");
-		});
-
-
+        this.handleAsyncDataLoad();
 
 	}
 
+    async handleAsyncDataLoad(){
+        if(await this._exService.loadExDataAsync()){
+            this.exData = this._exService.getLoadedExData();
+        }
+    }
+
 	getNokVal(pow){
-		
+
 		if(pow <= 0){
 			return 1;
 		}else{
