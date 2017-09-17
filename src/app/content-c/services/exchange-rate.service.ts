@@ -20,8 +20,7 @@ export class ExchangeRateService {
 
 
 	async loadExDataAsync(): Promise<boolean> {
-		const responce = await this._http.get(this.url).toPromise();
-		this.processLodedExData(responce);
+		this.processLodedExData(await this._http.get(this.url).toPromise());
 		return true;
 	}
 
@@ -39,14 +38,14 @@ export class ExchangeRateService {
 
 		tempList.forEach(current => {
 			//where currency is in wanted list, and data is daily
-			if(wantedCurrencies.includes(current.getAttribute('QUOTE_CUR')) && current.getAttribute('FREQ') == "B"){
-				filteredList.push({"name": current.getAttribute('QUOTE_CUR'), "value" : current.childNodes[0].getAttribute('OBS_VALUE'), "multiply" : current.getAttribute('UNIT_MULT')})
+			if(wantedCurrencies.includes(current.getAttribute('BASE_CUR')) && current.getAttribute('FREQ') == "B"){
+				filteredList.push({"name": current.getAttribute('BASE_CUR'), "value" : current.childNodes[0].getAttribute('OBS_VALUE'), "multiply" : current.getAttribute('UNIT_MULT')})
 			}
 
 		});
 
 		this.exData = filteredList;
-		this.exDataLoaded.emit(true);
+		console.log("loaded");
 
 	}
 
